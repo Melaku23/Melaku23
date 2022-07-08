@@ -1,0 +1,70 @@
+
+
+2
+import numpy as np
+3
+import matplotlib.pyplot as plt
+4
+from utils import *
+5
+import copy
+6
+import math
+7
+%matplotlib inline
+8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+%######################################
+10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11
+# load the dataset
+12
+x_train, y_train = load_data()
+13
+# print x_train
+14
+print("Type of x_train:",type(x_train))
+15
+print("First five elements of x_train are:\n", x_train[:5]) 
+16
+​
+17
+# print y_train
+18
+print("Type of y_train:",type(y_train))
+19
+print("First five elements of y_train are:\n", y_train[:5])  
+20
+​
+21
+print ('The shape of x_train is:', x_train.shape)
+22
+print ('The shape of y_train is: ', y_train.shape)
+23
+print ('Number of training examples (m):', len(x_train))
+24
+​
+25
+# Create a scatter plot of the data. To change the markers to red "x",
+26
+# we used the 'marker' and 'c' parameters
+27
+plt.scatter(x_train, y_train, marker='x', c='r') 
+28
+​
+29
+# Set the title
+30
+plt.title("Profits vs. Population per city")
+31
+# Set the y-axis label
+32
+plt.ylabel('Profit in $10,000')
+33
+# Set the x-axis label
+34
+plt.xlabel('Population of City in 10,000s')
+35
+plt.show()
